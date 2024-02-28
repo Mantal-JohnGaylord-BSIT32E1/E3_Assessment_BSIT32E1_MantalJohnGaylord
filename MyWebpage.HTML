@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Website</title>
+  <style>
+    body {
+      background-color: rgb(212, 150, 99);
+    }
+    h1, h2, h3 {
+      padding: 20px;
+    }
+    p {
+      font-size: 14px;
+    }
+    li {
+      list-style-type: disc; 
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to...</h1>
+  <p>This is a paragraph...</p>
+  <img src="japanseGob.jpg" alt="Image drawn by me">
+  
+  <ol>
+    <li>Japanse Goblin</li>
+    <li>Elf</li>
+    <li>Chunchunmaru</li>
+  </ol>
+  <p>Click here to see<a href="https://www.youtube.com/watch?v=zugd-NTJNTA">  the heaven :)</a></p>
+  
+  <h3 style="color: rgb(62, 7, 227);">HEADER 3</h3>
+  <button onclick="checkNumber()">Check Number</button>
+  <p id="result"></p>
+  <script>
+    function checkNumber() {
+      var number = prompt("Enter number:");
+      
+      if (isNaN(number)) {
+        document.getElementById("result").textContent = "Invalid input. Please enter a valid number.";
+        return;
+      }
+      number = Number(number);
+      if (number % 2 === 0) {
+        document.getElementById("result").textContent = number + " is even.";
+      } else {
+        document.getElementById("result").textContent = number + " is odd.";
+      }
+    }
+  </script>
+</body>
+</html>
